@@ -11,26 +11,22 @@ class MainContent extends StatefulWidget {
   _ContentState createState() => _ContentState();
 }
 
-class _ContentState extends State<MainContent> {  
+class _ContentState extends State<MainContent> {
   @override
   Widget build(BuildContext context) {
     Widget selectedTab;
     if (widget.tab == 'home') {
       selectedTab = HomeTab();
-    }
-    else if (widget.tab == 'meeting') {
+    } else if (widget.tab == 'meeting') {
       selectedTab = MeetingTab();
-    }
-    else if(widget.tab == 'about') {
+    } else if (widget.tab == 'about') {
       selectedTab = AboutTab();
-    }
-    else {
+    } else {
       selectedTab = HomeTab();
     }
     return Container(
       child: selectedTab,
-      color: Colors.orange,
+      color: Colors.white,
     );
-
   }
 }

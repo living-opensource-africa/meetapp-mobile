@@ -44,34 +44,28 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          widget.title),
+          widget.title,
+          style: TextStyle(color: Colors.white),
+        ),
       ),
-      body: Center(
-        child: _children[_currentIndex]
-      ),
-      bottomNavigationBar: BottomNavigationBar( 
+      body: Center(child: _children[_currentIndex]),
+      bottomNavigationBar: BottomNavigationBar(
         onTap: tabView,
         currentIndex: _currentIndex,
         items: [
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
-            title: Text(
-              'Home'
-            ),
+            title: Text('Home'),
             backgroundColor: Colors.orange,
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.videocam),
-            title: Text(
-              'Meeting'
-            ),
+            title: Text('Meeting'),
             backgroundColor: Colors.orange,
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.info),
-            title: Text(
-              'About'
-            ),
+            title: Text('About'),
             backgroundColor: Colors.orange,
           ),
         ],

@@ -160,7 +160,7 @@ class _MyAppState extends State<MeetingTab> {
 
   _joinMeeting() async {
     String serverUrl =
-        serverText.text?.trim()?.isEmpty ?? "" ? "https://meet.livingopensource.africa" : serverText.text;
+        serverText.text?.trim()?.isEmpty ?? "" ? "https://opensource.livingopensource.africa" : serverText.text;
 
     try {
       var options = JitsiMeetingOptions()
