@@ -9,8 +9,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'MeetApp',
       theme: ThemeData(
-        primarySwatch: Colors.orange,
-      ),
+          primarySwatch: Colors.orange,
+          accentTextTheme: Typography.whiteMountainView),
       home: MyHomePage(title: 'LOSF MeetApp'),
     );
   }

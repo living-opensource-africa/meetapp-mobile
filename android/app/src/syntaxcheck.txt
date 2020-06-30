@@ -1,0 +1,9 @@
+*****     STRINGS       *****
+
+
+*****     DB FIELDS     *****
+
+
+*****     VARIABLES     *****
+
+

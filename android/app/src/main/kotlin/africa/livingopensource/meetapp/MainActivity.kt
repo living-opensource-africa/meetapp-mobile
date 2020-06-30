@@ -1,4 +1,4 @@
-package com.example.meetapp
+package africa.livingopensource.meetapp
 
 import androidx.annotation.NonNull;
 import io.flutter.embedding.android.FlutterActivity
