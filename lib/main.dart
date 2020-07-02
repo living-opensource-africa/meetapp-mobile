@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:meetapp/widgets/main_content.dart';
+import 'package:meetapp/values/strings.dart';
 
 void main() => runApp(MyApp());
 
@@ -7,11 +8,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'MeetApp',
+      title: app_name,
       theme: ThemeData(
           primarySwatch: Colors.orange,
           accentTextTheme: Typography.whiteMountainView),
-      home: MyHomePage(title: 'LOSF MeetApp'),
+      home: MyHomePage(title: app_name),
     );
   }
 }
