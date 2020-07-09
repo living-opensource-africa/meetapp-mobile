@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:jitsi_meet/feature_flag/feature_flag_enum.dart';
 import 'dart:async';
 import 'package:jitsi_meet/jitsi_meet.dart';
 import 'package:jitsi_meet/jitsi_meeting_listener.dart';
@@ -27,6 +28,11 @@ class _MyAppState extends State<MeetingTab> {
   var isAudioOnly = true;
   var isAudioMuted = true;
   var isVideoMuted = true;
+
+  Map<FeatureFlagEnum, bool> jitsiFlags = {
+    FeatureFlagEnum.CALL_INTEGRATION_ENABLED: false,
+    FeatureFlagEnum.CHAT_ENABLED: true
+  };
 
   @override
   void initState() {
@@ -228,7 +234,8 @@ class _MyAppState extends State<MeetingTab> {
         ..iosAppBarRGBAColor = iosAppBarRGBAColor.text
         ..audioOnly = isAudioOnly
         ..audioMuted = isAudioMuted
-        ..videoMuted = isVideoMuted;
+        ..videoMuted = isVideoMuted
+        ..featureFlags = jitsiFlags;
 
       debugPrint("JitsiMeetingOptions: $options");
       await JitsiMeet.joinMeeting(
