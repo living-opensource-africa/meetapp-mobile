@@ -17,7 +17,7 @@ class _MyAppState extends State<MeetingTab> {
   static String room = 'TestRoom';
   static String subject = '';
   static String email = '';
-  final serverText = "https://opensource.livingopensource.africa";
+  final serverText = "https://meetapp.livingopensource.africa";
   TextEditingController roomText = TextEditingController(text: room);
   TextEditingController subjectText = TextEditingController(text: subject);
   TextEditingController nameText = TextEditingController(text: displayName);
